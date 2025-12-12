@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Event Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .hero {
+            background-image: url('https://via.placeholder.com/1200x400?text=College+Event');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.5em;
+        }
+        section {
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .about, .highlights, .registration {
+            margin-bottom: 40px;
+        }
+        .highlights ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .highlights li {
+            background-color: #fff;
+            margin: 10px 0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .registration button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .registration button:hover {
+            background-color: #218838;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our College Event</h1>
+        <nav>
+            <a href="#about" style="color: white; margin: 0 15px;">About</a>
+            <a href="#highlights" style="color: white; margin: 0 15px;">Highlights</a>
+            <a href="#registration" style="color: white; margin: 0 15px;">Register</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1>Annual College Tech Fest</h1>
+            <p>Date: October 15, 2023 | Location: Campus Auditorium</p>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About the Event</h2>
+        <p>Join us for an exciting day of innovation, workshops, and networking. Our college event brings together students, faculty, and industry experts to explore the latest in technology and creativity.</p>
+    </section>
+
+    <section id="highlights" class="highlights">
+        <h2>Event Highlights</h2>
+        <ul>
+            <li><strong>Keynote Speech:</strong> Inspiring talk by a renowned tech entrepreneur.</li>
+            <li><strong>Workshops:</strong> Hands-on sessions on AI, web development, and more.</li>
+            <li><strong>Competitions:</strong> Coding challenges and hackathons for participants.</li>
+            <li><strong>Networking:</strong> Meet and connect with peers and professionals.</li>
+        </ul>
+    </section>
+
+    <section id="registration" class="registration">
+        <h2>Register Now</h2>
+        <p>Don't miss out! Secure your spot today.</p>
+        <button onclick="alert('Registration coming soon!')">Register</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 College Event Team. All rights reserved.</p>
+    </footer>
+</body>
+</html>
