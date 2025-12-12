@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average of Five Subjects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input {
+            margin: 5px;
+            padding: 8px;
+            width: 200px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculate Average of Five Subjects</h1>
+    <form id="marksForm">
+        <label for="subject1">Subject 1 Mark:</label>
+        <input type="number" id="subject1" required><br>
+
+        <label for="subject2">Subject 2 Mark:</label>
+        <input type="number" id="subject2" required><br>
+
+        <label for="subject3">Subject 3 Mark:</label>
+        <input type="number" id="subject3" required><br>
+
+        <label for="subject4">Subject 4 Mark:</label>
+        <input type="number" id="subject4" required><br>
+
+        <label for="subject5">Subject 5 Mark:</label>
+        <input type="number" id="subject5" required><br>
+
+        <button type="button" onclick="calculateAverage()">Calculate Average</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        function calculateAverage() {
+            const marks = [];
+            for (let i = 1; i <= 5; i++) {
+                const mark = parseFloat(document.getElementById('subject' + i).value);
+                if (isNaN(mark)) {
+                    document.getElementById('result').innerHTML = 'Please enter valid numbers for all subjects.';
+                    return;
+                }
+                marks.push(mark);
+            }
+            const sum = marks.reduce((acc, curr) => acc + curr, 0);
+            const average = sum / 5;
+            document.getElementById('result').innerHTML = 'The average mark is: ' + average.toFixed(2);
+        }
+    </script>
+</body>
+</html>
